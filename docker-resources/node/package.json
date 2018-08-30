@@ -1,0 +1,8 @@
+{
+  "directories": {
+    "test": "my/test"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}

@@ -9,6 +9,7 @@ services:
     ports:
       - "8080"
     volumes:
-      - "./node:/usr/src/app/my"
+      - "./node/my:/usr/src/app/my"
+      - "./node/test:/usr/src/app/test"
     working_dir: /usr/src/app
     command: "node my/myfirst.js"
