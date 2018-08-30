@@ -2,15 +2,18 @@ var expect = require('chai').expect;
 var log = require('../my/mylogger');
 
 describe('addTwoNumbers()', function () {
-  it('should add two numbers', function () {
-    var x = 5;
-    var y = 1;
-    var sum1 = x + y;
-    var sum2 = log.addTwoNumbers(x, y);
+  const assertions = [
+    { first: 5, second: 1 },
+    { first: -10000, second: -80 },
+  ];
 
-    console.log('addTwoNumbers() should return the sum of its two parameters.');
-    console.log('Expect ' + sum1 + ' to equal ' + sum2 + '.');
-
-    expect(sum2).to.be.equal(sum1);
-  });
+  assertions.forEach(({first, second}) => {
+    describe(`Adding ${first} and ${second}`, function() {
+      var result = first + second;
+      it(`should return ${result}`, function() {
+        var sum2 = log.addTwoNumbers(first, second);
+        expect(sum2).to.be.equal(result);
+      })
+    })
+  })
 });
