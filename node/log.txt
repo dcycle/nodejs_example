@@ -1,2 +1,0 @@
-This is some random html
-Hello content!Hello content!Hello content!Request /?q=a&year=2015Request /favicon.icoRequest /?q=a&year=2015Request /?q=a&year=2015Request /?q=a&year=2015&a=bbb

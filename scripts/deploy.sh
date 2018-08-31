@@ -7,3 +7,5 @@ set -e
 
 docker pull node
 docker-compose up -d --build
+
+docker-compose ps

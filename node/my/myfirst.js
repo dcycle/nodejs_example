@@ -6,7 +6,7 @@ var fs = require('fs');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write("x The date and time are currently: " + dt.myDateTime());
+  res.write("xy The date and time are currently: " + dt.myDateTime());
   res.write(req.url);
   var q = url.parse(req.url, true).query;
   var txt = q.year + " " + q.month;

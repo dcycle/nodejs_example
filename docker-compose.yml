@@ -11,5 +11,7 @@ services:
     volumes:
       - "./node/my:/usr/src/app/my"
       - "./node/test:/usr/src/app/test"
+      - "./node/logs:/usr/src/app/logs"
     working_dir: /usr/src/app
     command: "node my/myfirst.js"
+    # command: "forever --watch ./my/myfirst.js -p 8080"

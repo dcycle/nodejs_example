@@ -1,6 +1,23 @@
 var expect = require('chai').expect;
 var log = require('../my/mylogger');
+var sinon = require('sinon');
+var fs = require('fs');
 
+describe('myLogger()', function () {
+  const assertions = [
+    { text: 'Hello world.' },
+  ];
+
+  assertions.forEach(({text}) => {
+    describe(`Logging ${text}`, function() {
+      it(`should log the ${text}`, function() {
+        var appendFile = sinon.stub(fs, 'appendFile');
+        log.myLogger(text);
+        sinon.assert.calledOnce(appendFile);
+      })
+    })
+  })
+});
 
 describe('addTwoNumbers()', function () {
   // This is the equivalent of data providers in PHPUnit.
@@ -8,7 +25,7 @@ describe('addTwoNumbers()', function () {
   const assertions = [
     { first: 5, second: 1 },
     { first: -10000, second: -80 },
-    { first: -9999999999999999, second: -9999999999999999 },
+    { first: -99999, second: -99999 },
   ];
 
   assertions.forEach(({first, second}) => {

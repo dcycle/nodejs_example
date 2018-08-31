@@ -5,3 +5,5 @@ WORKDIR /usr/src/app
 ADD docker-resources/node/package.json package.json
 
 RUN npm install --save-dev mocha chai
+RUN npm install --save-dev sinon
+RUN npm install forever -g
