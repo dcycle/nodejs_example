@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/dcycle/nodejs_example.svg?style=svg)](https://circleci.com/gh/dcycle/nodejs_example)
+
 https://www.w3schools.com/nodejs/nodejs_get_started.asp
 https://www.w3schools.com/nodejs/nodejs_http.asp
 https://www.joyent.com/node-js/production/design/errors#fn:1
